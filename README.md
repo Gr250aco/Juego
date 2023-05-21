@@ -1,2 +1,2 @@
 # Juego
-A padar programación 
+A pasar programación 
