@@ -1,0 +1,419 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+#include <fstream> 
+
+using namespace std;
+
+void puntuacion() {
+	system("CLS");
+	ifstream archivo;
+	archivo.open("puntaje.txt");
+	string linea;
+	
+
+	while (getline(archivo, linea)) {
+		cout << linea << endl;
+	}
+	system("pause");
+}
+void sumar(int* p ) {
+	system("CLS");
+	ifstream archivo;
+	archivo.open("puntaje.txt");
+	int  linea;
+	
+	for (int i = 0; i == 2;i++ ) {
+		*p++;
+	}
+	
+}
+void ave(string* a, string* b, string* c, int num, int numm, int nummm, int val, int vall, int valll) {
+	if (num == val) {
+		if (numm != vall) {
+			if (nummm != valll) {
+				*a = "1 valor es correcto";
+			}
+		}
+	}
+	if (num != val) {
+		if (numm == vall) {
+			if (nummm != valll) {
+				*a = "1 valor es correcto";
+			}
+		}
+	}
+	if (num != val) {
+		if (numm != vall) {
+			if (nummm == valll) {
+				*a = "1 valor es correcto";
+			}
+		}
+	}
+	if (num == val) {
+		if (numm == vall) {
+			if (nummm != valll) {
+				*a = "2 valores son correctos";
+			}
+		}
+	}
+	if (num == val) {
+		if (numm != vall) {
+			if (nummm == valll) {
+				*a = "2 valores son correctos";
+			}
+		}
+	}
+	if (num != val) {
+		if (numm == vall) {
+			if (nummm == valll) {
+				*a = "2 valores son correctos";
+			}
+		}
+	}
+	if (num != val) {
+		if (numm != vall) {
+			if (nummm != valll) {
+				*a = "ningun valor es correcto";
+			}
+		}
+	}
+	if (vall == numm) {
+		if (valll == nummm) {
+			if (val != num) {
+				*a = "2 valores son correctos";
+			}
+		}
+	}
+}
+
+void check(string* b, int num, int numm, int nummm, int val, int vall, int valll) {
+	if (vall == num) {
+		*b = "Un valor esta en posicion erronea";
+		if (val == num) {
+			*b = " ";
+		}
+	}
+	if (valll == num) {
+		*b = "Un valor esta en posicion erronea";
+		if (val == num) {
+			*b = " ";
+		}
+	}
+	if (val == numm) {
+		*b = "Un valor esta en posicion erronea";
+		if (vall == numm) {
+			*b = " ";
+		}
+	}
+	if (valll == numm) {
+		*b = "Un valor esta en posicion erronea";
+		if (vall == numm) {
+			*b = " ";
+		}
+	}
+	if (val == nummm) {
+		*b = "Un valor esta en posicion erronea";
+		if (valll == nummm) {
+			*b = " ";
+		}
+	}
+	if (vall == nummm) {
+		*b = "Un valor esta en posicion erronea";
+		if (valll == nummm) {
+			*b = " ";
+		}
+	}
+	if (vall == num) {
+		if (val = nummm)
+		{
+			if (valll == numm) {
+				*b = "3 valores en orden erroneo";
+			}
+		}
+	}
+	if (vall == nummm) {
+		if (val = numm)
+		{
+			if (valll == num) {
+				*b = "3 valores en orden erroneo";
+			}
+		}
+	}
+}
+
+class padre {
+public:
+
+	int aver(int num, int numm, int nummm, string H,int k,int P) {
+		int val1, val2, val3;
+		int c = 1;
+		int p;
+		int x1 = num, y = numm, z1 = nummm;
+		
+		while (c == 1) {
+			system("CLS");
+			int x, z;
+			string A = " ", B = "", C = "";
+
+			cout << "\t\t*-----------------------------------------------------------*" << endl;
+			cout << "\t\t|                       Road to Aprobar                     |" << endl;
+			cout << "\t\t|                                                           |" << endl;
+			cout << "\t\t|                                                           |" << endl;
+			cout << "\t\t|     1.- Reglas          2.- Iniciar        3.-salir       |" << endl;
+			cout << "\t\t|                                                           |" << endl;
+			cout << "\t\t|                                                           |" << endl;
+			cout << "\t\t*-----------------------------------------------------------*" << endl;
+
+			cin >> x;
+
+			switch (x) {
+			case 1:
+				cout << "\t\t*-------------------------------------------------*" << endl;
+				cout << "\t\t|                     Reglas                      |" << endl;
+				cout << "\t\t|                                                 |" << endl;
+				cout << "\t\t|1.- Tandras 5 intentos                           |" << endl;
+				cout << "\t\t|2.- No hay numeros negaativos ni fracciones      |" << endl;
+				cout << "\t\t|3.- No uses ChatGPT                              |" << endl;
+				cout << "\t\t|                                                 |" << endl;
+				cout << "\t\t*-------------------------------------------------*" << endl;
+				system("pause");
+				break;
+
+			case 2:
+				for (int i = 0; i < 5; i++) {
+					A = " ";
+					B = " ";
+					system("CLS");
+					cout << "Intento" << i + 1 << endl;
+					cout << "Ingrese sus 3 dijitos del 0 al 9\t" << endl;
+					cin >> val1 >> val2 >> val3;
+
+					if (num == val1) {
+						if (numm == val2) {
+							if (nummm == val3) {
+								k++;
+								P ++;
+								sumar(&p);
+								cout << p;
+								cout << "Has ganado felicidades " << H << endl;
+								cout << "TENGA SU NUEVA Y FLAMANTE NINTENDO SWITCH EDICION TEARS OF THE KINGDOM" << endl;
+								cout << "    #/,,,, ################################################## *****#/" << endl;
+								cout << " #******(/%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%/((//////*" << endl;
+								cout << "*****(****%%                        *                        %////%%////" << endl;
+								cout << "(**&%%%&**%%                       ***                       %/%/&//%(%/" << endl;
+								cout << "(**/(#(/**%%                      *****                      %(///%%////" << endl;
+								cout << "#****//***%%                     *******                     %/////////(" << endl;
+								cout << "#**#*(/((*%%                    **     **                    %(//%##%//(" << endl;
+								cout << "#*//*#(//*%%                   ****   ****                   %(/(&&&&(/(" << endl;
+								cout << "#****/****%%                  ****** ******                  &(//((((//(" << endl;
+								cout << "#/****%%**%&                 ***************                 &(/(%(////(" << endl;
+								cout << "(/********&&                                                 &(////////(" << endl;
+								cout << " #/*/**///&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&(///////(" << endl;
+								cout << "    ##((((&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#(####." << endl;
+								
+								
+								ofstream archivo;
+								archivo.open("puntaje.txt");
+
+								if (!archivo) {
+									cout << "Error al intentar abrir el archivo" << endl;
+
+								}
+								else {
+									
+									archivo << P;
+									archivo.close();
+								}
+							
+							
+								c++;
+								i = 5;
+
+							}
+
+						}
+
+					}
+					ave(&A, &B, &C, x1, y, z1, val1, val2, val3);
+					check(&B, x1, y, z1, val1, val2, val3);
+					cout << A << endl;
+					cout << B << endl;
+					cout << C << endl;
+					system("pause");
+					if (i == 4) {
+						system("CLS");
+						cout << "\t\thas perdido te quedaste sin oportunidades"<<endl;
+						cout << "\t\tlos numeros eran :"<<endl;
+						cout <<num<<endl;
+						cout << numm << endl;
+						cout << nummm << endl;
+						system("pause");
+					}
+				}
+				
+			case 3:
+				c++; break;
+				break;
+
+			}
+
+		}
+		return 0;
+	}
+	padre(int x, int y, int z) {};
+};
+
+int main() {
+	system("COLOR 09");
+	int a = 1, Q, total = 100;
+	string H;
+	int k = 0;
+	int P=0;
+	int num1, num2, num3;
+	int z = 2;
+	int w;
+
+	cout << "	                                                                                        &@" << endl;
+	cout << "               *(,                            ./(/.*,                             @@%         @(@/             .@@                                ,(*,*,." << endl;
+	cout << "	     ,*(((                         /(((.      /                          @(  @#      #@   &@          .@( @%                            *.      ((( " << endl;
+	cout << "	   .   (((                        ((((         /                        @/    .@/   @#     .@,      ,@/    @%                          ((      (((( " << endl;
+	cout << "	      .((/                       (((((         ,                       @/  (@.  ,@%@         @@   *@,       @#                          ,( .(.  ((( " << endl;
+	cout << "	      .((*                       .((((       ..                       @*  #@ #@  @&@*         ,@(@,          @*                                .((( " << endl;
+	cout << "	       ((*                         ./((/.,*.                         @,  %@    %@.  /@.       #@@&            @*                               ,((( " << endl;
+	cout << "	       ((*                                                          @.  &@    @& &@   (@.   %@   *@            @,                              (((( " << endl;
+	cout << "	                                                                  @@   @    @       @    @         @            @                                                      (((    (( " << endl;
+	cout << "	                                                                 @@   @   &@          @@   @        @@           @                                                     (((    (( " << endl;
+	cout << "	                                                                @@   @   @           @ .@    @        @           @                                                    (((    (( " << endl;
+	cout << "	                                                               @@   @   @          @     &@   ,@       @@          @                                                   ((((((((( " << endl;
+	cout << "	                           ((*()                              @@   @  @@        *@         @@   &@       @          @                                                         (( " << endl;
+	cout << "	                         ((    ()                            @@   @  @        @@             @@   @@      @(         @                                                        (( " << endl;
+	cout << "	                        (((      (                          @@   @ @@       @@                 @@   @@     /@         @                                                       (( " << endl;
+	cout << "                                 /((   ()                          @#   @ @       @@                     @@   @@     @         @                                                      (( " << endl;
+	cout << "	                         (((((())                         @*  *@@@      @@                         @@   @@    @@       /@" << endl;
+	cout << "	                       ,((       )                       @   %@@      @@                             @(   @@    @       @@                /( ((" << endl;
+	cout << "	                       (((        )                     @   @@@     @@                                 @    @#   @@      @@             *     ((" << endl;
+	cout << "	                       (((       ()          ***********   @@******@    ******    **************     ,***********  @   ************         ((( " << endl;
+	cout << "	    (                    ((((((()         ############# * @####### * ######## * ################ * ############## * #############         (((" << endl;
+	cout << "	   (                                    ###############  @@#######*  ########* ################ .###############  ###############        ((    " << endl;
+	cout << "	  ((                                   ########*    @   @@ #######*  ########* #######********  #########*******  ########(******,    ((((())))" << endl;
+	cout << "	(((                                    ########*   ####%/*@#######*  ########* ##############*  ################**################**  " << endl;
+	cout << "	(((                                    ########* ########* #######*  ########* #############     %###############*@###############**   " << endl;
+	cout << "	((((((())                              #########///######* ########***#######* #######(///////**  *///////#######*  #//////(######**   " << endl;
+	cout << "	((      ((()                            #################* #################*  ################*################* ################.    " << endl;
+	cout << "	((       ))(                             ###############   ,***************   ******#####****** ###************** ############## @     " << endl;
+	cout << "	  ((.(((( )                                       @@@ @      #################* #######*   *######* ################*         @@   @@ @" << endl;
+	cout << "                                                         @@  @       #################  #######*   *######* ################            @#   @@@" << endl;
+	cout << "                                                       @@@  @             #######*      #######*****######* #######(*******               @    @@" << endl;
+	cout << "                                                     @@@   @              #######*      ##################* ##############*                 @   @@." << endl;
+	cout << "                                                   @@@@   @               #######*      ##################* ##############                    @  @@@" << endl;
+	cout << "                                                 @@ @@   @                #######*      #######*   *######* #######(*********                   @ @@ @" << endl;
+	cout << "                                               @@ @@@   @                 #######*      #######*   *######* ################*                     @@@@ @" << endl;
+	cout << "                                ....      ...#(  @@@...#.      ....     ..#######*    ..#######*...*######* ################*....    ..........    &@#@ .@   ........" << endl;
+	cout << "                             #######/** #######*/@#######*   #######* ########**   ########* ###############**   ################* ###############**  @@@#############*" << endl;
+	cout << "                             ##########**######*,@#######*  ########* #########(* #########* ################*   ################. ################*   ###############*" << endl;
+	cout << "                             ##################*(@#######*  ########* #####################* #######/*(######*   #######*******    #######* #######*  #######%******" << endl;
+	cout << "                             ##################*( #######*  ########* #####################* ################*** #############**   ###############*** ################**" << endl;
+	cout << "                             ########*#########*, #######*  ########* #######*/####,#######* ##################* #############     ##################* ################*" << endl;
+	cout << "                             ########*#########*, #######****(######* #######*/##  ########* #######/***,######* #######********** #######*##########*   *******(######*" << endl;
+	cout << "                             ########*  #######*,@#################*  #######*,    ########* ##################* ################* #######*   #######*################/@&" << endl;
+	cout << "                             #######% @@#######.@ .##############/    #######      #######%  #%##############    ################  #######    ####### ###############    @" << endl;
+	cout << "                           @@        @    @.  #@                                                                                                              @     @ @    @" << endl;
+	cout << "                         @@        /@    @   &@                                                                                                               /@     @@ @    @" << endl;
+	cout << "                      @@         @/    @   @@          &                         @    @                         @    @                         @              @@      @  @    @ " << endl;
+	cout << "                    @@          @     @   @@           @         #######         @    @        ########         @    @         #######         @               @@      @@ &@   .@ " << endl;
+	cout << "                  @@          @@     @   @@            @       ###########       @    @      ###########        @    @       ###########       @                @@       @  @@   %@  " << endl;
+	cout << "                @@           @      @   @@             @      ####     ####      @    @     ####     ####       @    @      ####     ####      @                 @@       @,  @@   @@ " << endl;
+	cout << "              @@           @@      @   @@              @              ####       @    @             ####        @    @              ####       @                  @,       %@   @@   @@ " << endl;
+	cout << "            @%            @       @   @@               @          #######        @    @         #######         @    @          #######        @                   @         @    @@   @@  " << endl;
+	cout << "          @.            @@       @   @@                @          ###            @    @          ###            @    @          ###            @                    @         @@    @@   @@ " << endl;
+	cout << "        @              @        @   @(                 @                         @    @                         @    @                         @                     @          @     @%   @@" << endl;
+	cout << "                    *@        @   @,                   @          ###            @    @         ####            @    @          ###            @                       @   %@@@@@@@@@          @" << endl;
+	cout << "                    @      @@@@@@@@                                                                                   ,,,,,,,,,,,,,,,,,,,,,,,,,,.        %@@@@@@@@@      @           @@ %@@@@@@@@@v" << endl;
+	cout << "                  @@         @   @        @@@@@@@(                                                                                    %@@@@@@@@&                     %@@@@@@@@@        @ " << endl;
+	cout << "                 @          @   @                        @@@@@@@,                                                  &@@@@@@@@&                     &@@@@@@@@&               @            @." << endl;
+	cout << "               @@          @   @                                       ,@@@@@@@                 @@@@@@@@@%                     &@@@@@@@@%                                  ,@            &@" << endl;
+	cout << "              @           @   @                                              @@@@@@@@@%@@@@@@@              @@@@@@@@@%                                                      &@             @" << endl;
+	cout << "                        /@   @                            @@@@@@@@@%                     @@@@@@@@@%  &@@@@@@@                                                                @@" << endl;
+	cout << "                       %@   @          @@@@@@@@@#                     @@@@@@@@@#                                    @@@@@@@#                                                  @@" << endl;
+	cout << "                      @@   @@#                     @@@@@@@@@#                                                                      @@@@@@@,                                    @@" << endl;
+	cout << "                     @@         @@@@@@@@@#                                                 (((((((((                                    .@@@@@@@                       @(" << endl;
+	cout << "                    @@(                                                                         *((                                                    /@@@@@@@         @" << endl;
+	cout << "                                                                                              ((((                                                                    &@@@" << endl;
+	cout << "                              ((((((((                                                            ((                                                  (((((((((( " << endl;
+	cout << "                              ((                                                                   (((                                                       ((  " << endl;
+	cout << "                              (((   ((                                                            (((                                                      ,((   " << endl;
+	cout << "                                     ((                                                     (   ((                                                        (((    " << endl;
+	cout << "                                     ((                                                                                                                  (((     " << endl;
+	cout << "                                     (                                                                                                                  (((      " << endl;
+	cout << "                              (.   (                                                                                                                    ((       " << endl;
+	cout << "                                                                                                                                                       (((        " << endl;
+	system("pause");
+	system("CLS");
+	while (z == 2)
+	{
+		a = 1;
+
+
+		cout << "seleccion de nivel (apartir de el nivel 10 subira la dificultad y los numeros podran salir de dos o mas digitos)\t " << endl;
+		cout << "\t\t";
+		cin>> w;
+		for (int i = 0; i <= 1; i++) {
+			num1 = rand() % w;
+			num2 = rand() % w;
+			num3 = rand() % w;
+
+		}
+		cout << "\t\tsu nombre de usuario\t" << endl;
+		cin >> H;
+		ofstream archivo;
+		archivo.open("usuario.txt");
+
+		if (!archivo) {
+			cout << "Error al intentar abrir el archivo" << endl;
+
+		}
+		else {
+			for (int i = 1; i <= 1; i++) {
+				archivo << H;
+			}
+			archivo.close();
+		}
+
+	
+			int b;
+
+			cout << "\t\t*--------------------------------------------------------------*" << endl;
+			cout << "\t\t|                 Road to Aprobar                              |" << endl;
+			cout << "\t\t|                                                              |" << endl;
+			cout << "\t\t|   1.- Iniciar        2.- puntuacion             3.- Salir    |" << endl;
+			cout << "\t\t|                                                              |" << endl;
+			cout << "\t\t*--------------------------------------------------------------*" << endl;
+			cin >> b;
+
+			padre siu(num1, num2, num3);
+
+			switch (b) {
+			case 1:
+
+				system("CLS");
+				cout << "Respuesta" << endl;
+				cout << num1 << endl;
+
+				cout << num2 << endl;
+				cout << num3 << endl;
+				system("pause");
+				cout << siu.aver(num1, num2, num3, H, k,P);
+				break;
+			case 2: puntuacion(); break;
+			case 3:
+				a++;
+
+				break;
+
+
+
+			}
+		}
+	}
