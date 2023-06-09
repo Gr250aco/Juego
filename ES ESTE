@@ -1,0 +1,696 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+#include <fstream> 
+#include <windows.h>
+#pragma comment(lib,"winmm.lib")
+#include <mmsystem.h>
+#include <sstream>
+
+using namespace std;
+void ultimo(int* a, int* b) {
+	ofstream archivo;
+	int juntar[2];
+
+	archivo.open("puntaje.txt");
+	if (!archivo) {
+		cout << "Error al intentar abrir el archivo" << endl;
+
+	}
+	else {
+		for (int i = 0; i < 1; i++) {
+			juntar[0] = *a;
+	
+		}
+
+		for (int i = 0; i < 1; i++) {
+			juntar[1] = *b;
+		}
+		for (int i = 0; i < 2; i++) {
+			archivo << juntar[i] << endl;
+		}
+	}
+	archivo.close();
+}
+void reacomoda(int* W) {
+	system("CLS");
+	ifstream archivo;
+	string aver[2];
+	string linea;
+	string aux1, aux2;
+	int i = 0;
+	int ai, ai2;
+	float nu3, nu4;
+	string Q = "1";
+	int J = 0, j = 0;
+	archivo.open("puntaje.txt");
+	while (getline(archivo, linea)) {
+		cout << linea << endl;
+		aver[i] = linea;
+		i++;
+	}
+	for (int k = 0; k < 1; k++) {
+		aux1 = aver[0];
+	}
+
+	for (int k = 0; k < 1; k++) {
+		aux2 = aver[1];
+	}
+
+
+	if (istringstream(aux1) >> ai && istringstream(aux2) >> ai2) {
+
+	}
+
+	if (*W == 1) {
+		if (istringstream(aux1) >> nu3 && istringstream(Q) >> nu4) {
+			j = nu3 - nu4;
+
+			ai = j;
+		}
+		cout << aux1;
+		if (*W == 2) {
+			Q = "1";
+			cout << "si entro qlo";
+			if (istringstream(aux2) >> nu3 && istringstream(Q) >> nu4) {
+				J = nu3 - nu4;
+				ai2 = j;
+			
+			}
+			aux2 = aver[1];
+
+
+		}
+	}
+	archivo.close();
+	ultimo(&ai, &ai2);
+}
+
+void gflash(string  aver, string aver2, int* W) {
+	ofstream archivo;
+	archivo.open("puntaje.txt");
+	int nu1, nu2;
+	string Q;
+	string tqm, tqm2;
+	int J = 0;
+	int X = *W - 1;
+	int P = 0;
+	if (!archivo) {
+		cout << "Error al intentar abrir el archivo" << endl;
+		cout << aver;
+		cout << aver2;
+	}
+	else
+	{
+
+
+		for (int i = -1; i < 1; i < i++)
+		{
+
+
+			tqm2 = aver2[1];
+			tqm = aver[0];
+			cout << endl << tqm << endl << tqm2 << endl;
+			if (i == -1)
+			{
+				if (i == X) {
+					Q = "1";
+					if (istringstream(tqm) >> nu1 && istringstream(Q) >> nu2) {
+
+						J = nu1 + nu2;
+
+					}
+					archivo << J << endl;
+				}
+
+				else {
+					Q = "1";
+					if (istringstream(tqm) >> nu1 && istringstream(Q) >> nu2) {
+
+						J = nu1 + nu2;
+					}
+					archivo << J << endl;
+				}
+			}
+			else
+			{
+				if (i != X) {
+					Q = "1";
+					if (istringstream(tqm) >> nu1 && istringstream(Q) >> nu2) {
+
+					
+						J = nu1 + nu2;
+					}
+					archivo << J << endl;
+				}
+				if (i == X) {
+					Q = "1";
+					if (istringstream(tqm) >> nu1 && istringstream(Q) >> nu2) {
+
+				
+						J = nu1 + nu2;
+					}
+
+					archivo << J << endl;
+				}
+			}
+		}
+
+		archivo.close();
+
+
+		reacomoda(W);
+	}
+
+
+}
+
+void punt(string* S, int* W) {
+	system("CLS");
+	ifstream archivo;
+	string aver[2];
+	string aver2[2];
+	int nu1, nu2;
+	string Q = "1";
+	int J;
+	int k = 0;
+	string tqm;
+	archivo.open("puntaje.txt");
+	string linea{ 1,2 };
+	int i = 0;
+	while (getline(archivo, linea)) {
+		cout << linea << endl;
+		aver[i] = linea;
+		aver2[1] = linea[1];
+		i++;
+		k++;
+	}
+	*S = aver[*W - 1];
+	cout << *S;
+	if (istringstream(*S) >> nu1 && istringstream(Q) >> nu2) {
+		J = nu1 + nu2;
+	}
+	if (-1 == *W - 1) {
+		if (istringstream(tqm) >> nu1 && istringstream(Q) >> nu2) {
+			J = nu1 + nu2;
+		}
+	}
+	if (0 == *W - 1) {
+		if (istringstream(tqm) >> nu1 && istringstream(Q) >> nu2) {
+			J = nu1 + nu2;
+		}
+	}
+	archivo.close();
+	gflash(aver[0], aver2[1], W);
+	system("pause");
+}
+void guardar(string* nu2, int* W) {
+	ifstream archivo;
+	archivo.open("usuario.txt");
+	string linea;
+	int i = 0;
+	string aver[2];
+	string extra = " ";
+	int q;
+	int nu1 = 0;
+	system("CLS");
+	while (getline(archivo, linea)) {
+		cout << linea << endl;
+		aver[i] = linea;
+		i++;
+	}
+	for (int i = 0; i < 2; i < i++)
+	{
+		cout << i + 1<<".-" << aver[i] << endl;
+	}
+	cout << "Selecciona que posicion quiere " << endl;
+	cin >> *W;
+	switch (*W)
+	{
+	case 1:
+
+
+		*nu2 = aver[0];
+		break;
+	case 2:*nu2 = aver[1]; break;
+	default:
+		break;
+	}
+	system("pause");
+}
+void ingresa(string* nu2, int* W) {
+	string jugadores;
+
+	string nu1 = " ";
+	ofstream archivo;
+	archivo.open("usuario.txt");
+
+	if (!archivo) {
+		cout << "Error al intentar abrir el archivo" << endl;
+
+	}
+	else {
+		cout << "Ingrese 2 jugadores" << endl;
+		for (int i = 0; i < 2; i < i++)
+		{
+			cin.ignore();
+			getline(cin, jugadores);
+
+			archivo << jugadores << endl;
+		}
+
+
+
+
+
+		archivo.close();
+
+	}
+	guardar(&nu1, W);
+	*nu2 = nu1;
+	system("pause");
+}
+void nombres(int i) {
+	ifstream archivo;
+	string linea;
+	string aver[2]; {}
+	int j = 0;
+	archivo.open("usuario.txt");
+	while (getline(archivo, linea)) {
+		linea;
+		cout << "\t\t\t\t\t";
+		aver[j] = linea;
+		j++;
+	}
+	for (int k = 0; k < 1; k < k++)
+	{
+		cout << aver[i] << "=   ";
+	}
+}
+void puntuacion(string* S) {
+	system("CLS");
+	int i = 0;
+	ifstream archivo;
+	archivo.open("puntaje.txt");
+	string linea;
+
+	cout << "       \t\t\t\t\t\t\t\t\t\t\tPuntuaciones" << endl;
+	while (getline(archivo, linea)) {
+
+		nombres(i);
+
+		cout << linea ;
+		cout << endl;
+		i++;
+	}
+	*S = linea;
+	system("pause");
+	archivo.close();
+}
+
+void ave(string* a, string* b, string* c, int num, int numm, int nummm, int val, int vall, int valll) {
+	if (num == val) {
+		if (numm != vall) {
+			if (nummm != valll) {
+				*a = "       \t\t\t\t\t\t\t\t\t1 valor es correcto ";
+			}
+		}
+	}
+	if (num != val) {
+		if (numm == vall) {
+			if (nummm != valll) {
+				*a = "       \t\t\t\t\t\t\t\t\t1 valor es correcto ";
+			}
+		}
+	}
+	if (num != val) {
+		if (numm != vall) {
+			if (nummm == valll) {
+				*a = "       \t\t\t\t\t\t\t\t\t1 valor es correcto ";
+			}
+		}
+	}
+	if (num == val) {
+		if (numm == vall) {
+			if (nummm != valll) {
+				*a = "       \t\t\t\t\t\t\t\t\t2 valores son correctos ";
+			}
+		}
+	}
+	if (num == val) {
+		if (numm != vall) {
+			if (nummm == valll) {
+				*a = "       \t\t\t\t\t\t\t\t\t2 valores son correctos ";
+			}
+		}
+	}
+	if (num != val) {
+		if (numm == vall) {
+			if (nummm == valll) {
+				*a = "       \t\t\t\t\t\t\t\t\t2 valores son correctos ";
+			}
+		}
+	}
+	if (num != val) {
+		if (numm != vall) {
+			if (nummm != valll) {
+				*a = "       \t\t\t\t\t\t\t\t\tningun valor es correcto ";
+			}
+		}
+	}
+	if (vall == numm) {
+		if (valll == nummm) {
+			if (val != num) {
+				*a = "       \t\t\t\t\t\t\t\t\t2 valores son correctos ";
+			}
+		}
+	}
+}
+
+void check(string* b, int num, int numm, int nummm, int val, int vall, int valll) {
+	if (vall == num) {
+		*b = "       \t\t\t\t\t\t\t\t\ty un valor esta en posicion erronea";
+		if (val == num) {
+			*b = " ";
+		}
+	}
+	if (valll == num) {
+		*b = "       \t\t\t\t\t\t\t\t\ty un valor esta en posicion erronea";
+		if (val == num) {
+			*b = " ";
+		}
+	}
+	if (val == numm) {
+		*b = "       \t\t\t\t\t\t\t\t\ty un valor esta en posicion erronea";
+		if (vall == numm) {
+			*b = " ";
+		}
+	}
+	if (valll == numm) {
+		*b = "       \t\t\t\t\t\t\t\t\ty un valor esta en posicion erronea";
+		if (vall == numm) {
+			*b = " ";
+		}
+	}
+	if (val == nummm) {
+		*b = "       \t\t\t\t\t\t\t\t\ty un valor esta en posicion erronea";
+		if (valll == nummm) {
+			*b = " ";
+		}
+	}
+	if (vall == nummm) {
+		*b = "       \t\t\t\t\t\t\t\t\ty un valor esta en posicion erronea";
+		if (valll == nummm) {
+			*b = " ";
+		}
+	}
+	if (vall == num) {
+		if (val = nummm)
+		{
+			if (valll == numm) {
+				*b = "       \t\t\t\t\t\t\t\t\ty 3 valores en orden erroneo";
+			}
+		}
+	}
+	if (vall == nummm) {
+		if (val = numm)
+		{
+			if (valll == num) {
+				*b = "       \t\t\t\t\t\t\t\t\ty 3 valores en orden erroneo";
+			}
+		}
+	}
+}
+
+class padre {
+public:
+
+	int aver(int num, int numm, int nummm, string H, int k, int P,int *W) {
+		int val1, val2, val3;
+		int c = 1;
+		int p;
+		int x1 = num, y = numm, z1 = nummm;
+		string S;
+		int J, nu1, nu2;
+		while (c == 1) {
+			system("CLS");
+			int x, z;
+			string A = " ", B = "", C = "";
+
+			cout << "                       \t\t\t\t\t\t*-------------------------------------------------------------*" << endl;
+			cout << "                       \t\t\t\t\t\t|                       Road to Aprobar                       |" << endl;
+			cout << "                       \t\t\t\t\t\t|                                                             |" << endl;
+			cout << "                       \t\t\t\t\t\t|                                                             |" << endl;
+			cout << "                       \t\t\t\t\t\t|     1.- Reglas          2.- Iniciar        3.-salir         |" << endl;
+			cout << "                       \t\t\t\t\t\t|                                                             |" << endl;
+			cout << "                       \t\t\t\t\t\t|                                                             |" << endl;
+			cout << "                       \t\t\t\t\t\t*-------------------------------------------------------------*" << endl;
+			cout << "               \t\t\t\t\t\t\t";
+
+			cin >> x;
+
+			switch (x) {
+			case 1:
+				system("CLS");
+				cout << "                       \t\t\t\t\t\t*-------------------------------------------------*" << endl;
+				cout << "                       \t\t\t\t\t\t|                     Reglas                      |" << endl;
+				cout << "                       \t\t\t\t\t\t|                                                 |" << endl;
+				cout << "                       \t\t\t\t\t\t|1.- Tandras 5 intentos                           |" << endl;
+				cout << "                       \t\t\t\t\t\t|2.- No hay numeros negaativos ni fracciones      |" << endl;
+				cout << "                       \t\t\t\t\t\t|3.- No uses ChatGPT                              |" << endl;
+				cout << "                       \t\t\t\t\t\t|                                                 |" << endl;
+				cout << "                       \t\t\t\t\t\t*-------------------------------------------------*" << endl;
+				system("pause");
+				break;
+
+			case 2:
+				for (int i = 0; i < 5; i++) {
+					A = " ";
+					B = " ";
+					string Q = "1";
+					system("CLS");
+					cout << "       \t\t\t\t\t\t\t\t\t\t\tIntento" << " " << i + 1 << endl;
+					cout << "       \t\t\t\t\t\t\t\t\tIngrese sus 3 dijitos del 0 al 9\t" << endl;
+					cout << "       \t\t\t\t\t\t\t\t\t";
+					cin >> val1;
+					cout << "       \t\t\t\t\t\t\t\t\t";
+					cin >> val2;
+					cout << "       \t\t\t\t\t\t\t\t\t";
+					cin >> val3;
+
+
+					if (num == val1) {
+						if (numm == val2) {
+							if (nummm == val3) {
+								
+
+								cout << "           \t\t\t\t\t\tHas ganado felicidades " << H << endl;
+								cout << "           \t\t\t\t\t\tTENGA SU NUEVA Y FLAMANTE NINTENDO SWITCH EDICION TEARS OF THE KINGDOM" << endl;
+								cout << "           \t\t\t\t\t\t    #/,,,, ################################################## *****#/" << endl;
+								cout << "           \t\t\t\t\t\t #******(/%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%/((//////*" << endl;
+								cout << "           \t\t\t\t\t\t*****(****%%                        *                        %////%%////" << endl;
+								cout << "           \t\t\t\t\t\t(**&%%%&**%%                       ***                       %/%/&//%(%/" << endl;
+								cout << "           \t\t\t\t\t\t(**/(#(/**%%                      *****                      %(///%%////" << endl;
+								cout << "           \t\t\t\t\t\t#****//***%%                     *******                     %/////////(" << endl;
+								cout << "           \t\t\t\t\t\t#**#*(/((*%%                    **     **                    %(//%##%//(" << endl;
+								cout << "           \t\t\t\t\t\t#*//*#(//*%%                   ****   ****                   %(/(&&&&(/(" << endl;
+								cout << "           \t\t\t\t\t\t#****/****%%                  ****** ******                  &(//((((//(" << endl;
+								cout << "           \t\t\t\t\t\t#/****%%**%&                 ***************                 &(/(%(////(" << endl;
+								cout << "           \t\t\t\t\t\t(/********&&                                                 &(////////(" << endl;
+								cout << "           \t\t\t\t\t\t #/*/**///&&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&(///////(" << endl;
+								cout << "           \t\t\t\t\t\t    ##((((&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#(####." << endl;
+								system("pause");
+						
+
+								punt(&S, W);
+
+								c++;
+								i = 5;
+
+							}
+
+						}
+
+					}
+					ave(&A, &B, &C, x1, y, z1, val1, val2, val3);
+					check(&B, x1, y, z1, val1, val2, val3);
+					cout << A << endl;
+					cout << B << endl;
+					cout << C << endl;
+					system("pause");
+					if (i == 4) {
+						system("CLS");
+
+						cout << "           \t\t\t\t\t\t #####     #    #     # #######    ####### #     # ####### ######   " << endl;
+						cout << "           \t\t\t\t\t\t#     #   # #   ##   ## #          #     # #     # #       #     # " << endl;
+						cout << "           \t\t\t\t\t\t#        #   #  # # # # #          #     # #     # #       #     #  " << endl;
+						cout << "           \t\t\t\t\t\t#  #### #     # #  #  # #####      #     # #     # #####   ######  " << endl;
+						cout << "           \t\t\t\t\t\t#     # ####### #     # #          #     #  #   #  #       #   #   " << endl;
+						cout << "           \t\t\t\t\t\t#     # #     # #     # #          #     #   # #   #       #    #   " << endl;
+						cout << "           \t\t\t\t\t\t #####  #     # #     # #######    #######    #    ####### #     #  " << endl;
+
+
+						cout << "           \t\t\t\t\t\tLos numeros eran :" << endl;
+						cout << "           \t\t\t\t\t\t" << num << endl;
+						cout << "           \t\t\t\t\t\t" << numm << endl;
+						cout << "           \t\t\t\t\t\t" << nummm << endl;
+						system("pause");
+						system("CLS");
+					}
+				}
+
+			case 3:
+				c++; break;
+				break;
+
+			}
+
+		}
+		return 0;
+	}
+	padre(int x, int y, int z) {};
+};
+
+int main() {
+	system("COLOR 09");
+	int a = 1, Q, total = 100;
+	int y = 0;
+	string H;
+	int k = 0;
+	int P = 0;
+	int num1, num2, num3;
+	int z = 1;
+	int w,W=0;
+	string G = "0";
+	int num = 0, numm = 0, nummm = 0,T=0,t;
+	padre siu(num, numm, nummm);
+	ofstream archivo;
+	string usua[10];
+	string punt[10];
+	string nu2 = " ";
+	const char* pa = "C:\\Users\\Retam\\source\\repos\\EL JUEGO\\EL JUEGO\\x64\\Debug\\kir.wav";
+	PlaySoundA(pa, NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+	
+	cout << "	                                                             #################* #######*   *######* ################*                  " << endl;
+	cout << "                                                                     #################  #######*   *######* ################                    " << endl;
+	cout << "                                                                          #######*      #######*****######* #######(*******                      " << endl;
+	cout << "                                                                          #######*      ##################* ##############*                        " << endl;
+	cout << "                                                                          #######*      ##################* ##############                         " << endl;
+	cout << "                                                                          #######*      #######*   *######* #######(*********                         " << endl;
+	cout << "                                                                          #######*      #######*   *######* ################*                           " << endl;
+	cout << "                                ....      ...#(  @@@...#.      ....     ..#######*    ..#######*...*######* ################*                           " << endl;
+	cout << "                             #######/** #######*/@#######*   #######* ########**   ########* ###############**   ################* ###############**  @@@#############*" << endl;
+	cout << "                             ##########**######*,@#######*  ########* #########(* #########* ################*   ################. ################*   ###############*" << endl;
+	cout << "                             ##################*(@#######*  ########* #####################* #######/*(######*   #######*******    #######* #######*  #######%******" << endl;
+	cout << "                             ##################*( #######*  ########* #####################* ################*** #############**   ###############*** ################**" << endl;
+	cout << "                             ########*#########*, #######*  ########* #######*/####,#######* ##################* #############     ##################* ################*" << endl;
+	cout << "                             ########*#########*, #######****(######* #######*/##  ########* #######/***,######* #######********** #######*##########*   *******(######*" << endl;
+	cout << "                             ########*  #######*,@#################*  #######*,    ########* ##################* ################* #######*   #######*################/  " << endl;
+	cout << "                             #######% @@#######.@ .##############/    #######      #######%  #%##############    ################  #######    ####### ###############     " << endl;
+	cout << "                                                                                                                                                                            " << endl;
+	cout << "                                                                                                                                                              " << endl;
+	cout << "                                                       &                         @    @                         @    @                         @                     " << endl;
+	cout << "                                                       @         #######         @    @        ########         @    @         #######         @                     " << endl;
+	cout << "                                                       @       ###########       @    @      ###########        @    @       ###########       @                     " << endl;
+	cout << "                                                       @      ####     ####      @    @     ####     ####       @    @      ####     ####      @                     " << endl;
+	cout << "                                                       @              ####       @    @             ####        @    @              ####       @                     " << endl;
+	cout << "                                                       @          #######        @    @         #######         @    @          #######        @                     " << endl;
+	cout << "                                                       @          ###            @    @         ###             @    @          ###            @                     " << endl;
+	cout << "                                                       @                         @    @                         @    @                         @                     " << endl;
+	cout << "                                                       @          ###            @    @         ####            @    @          ###            @                     " << endl;
+	
+
+	system("pause");
+	system("CLS");
+	while (z == 1)
+	{
+		T == 0;
+		a = 1;
+		cout << "                  \t\t\t\t\t\t*--------------------------------------------------------------*" << endl;
+		cout << "                       \t\t\t\t\t\t|                         Menu inicial                         |" << endl;
+		cout << "                       \t\t\t\t\t\t|                                                              |" << endl;
+		cout << "                       \t\t\t\t\t\t|      1.- Iniciar         2.- Puntaje         3.- Salir       |" << endl;
+		cout << "                       \t\t\t\t\t\t|                                                              |" << endl;
+		cout << "                       \t\t\t\t\t\t*--------------------------------------------------------------*" << endl;
+		cout << "               \t\t\t\t\t\t\t";
+		cin >> y;
+		switch (y)
+		{
+
+		case 1:
+			
+	
+			//cout << usua;
+
+			cout << "                   \t\t\tSeleccion de nivel (apartir de el nivel 10 subira la dificultad y los numeros podran salir de dos o mas digitos) " << endl;
+			cout << "\t\t\t\t\t\t\t\t\t\t\t\t";
+
+			cin >> w;
+			for (int i = 0; i <= 1; i++) {
+				num1 = rand() % w;
+				num2 = rand() % w;
+				num3 = rand() % w;
+
+			}
+
+			while (T == 0) {
+				system("CLS");
+		
+				cout << "                  \t\t\t\t\t\t\t1.- Crear usuarios" << endl;
+				cout << "                  \t\t\t\t\t\t\t2.- Jugar con usuarios pasados" << endl;
+				cout << "   \t\t\t\t\t\t\t\t\t";
+				cin >> t;
+				switch (t)
+				{
+				case 1: 	ingresa(&nu2, &W);
+					system("CLS");
+					T++; break;
+				case 2: guardar(&nu2, &W);
+					T++; break;
+				default:
+					break;
+
+				}
+			}
+
+
+			int b;
+
+			cout << "                       \t\t\t\t\t\t*--------------------------------------------------------------*" << endl;
+			cout << "                       \t\t\t\t\t\t|                       Road to Aprobar                        |" << endl;
+			cout << "                       \t\t\t\t\t\t|                                                              |" << endl;
+			cout << "                       \t\t\t\t\t\t|      1.- Iniciar                             2.- Salir       |" << endl;
+			cout << "                       \t\t\t\t\t\t|                                                              |" << endl;
+			cout << "                       \t\t\t\t\t\t*--------------------------------------------------------------*" << endl;
+			cout << "               \t\t\t\t\t\t\t";
+
+			cin >> b;
+
+
+
+			switch (b) {
+			case 1:
+
+				system("CLS");
+
+		
+				cout << siu.aver(num1, num2, num3, nu2, k, w,&W);
+				break;
+
+
+			case 2:z++; break;
+			default: break;
+
+
+			}
+			break;
+
+		case 2: puntuacion(&G); break;
+		case 3:z++; break;
+		}
+
+
+	}
+	return EXIT_SUCCESS;
+}
